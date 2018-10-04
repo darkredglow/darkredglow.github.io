@@ -156,7 +156,7 @@ JoinForm.prototype.validateField = function (fieldName, text) {
 
         if ( ! this.isUsername(text) ) {
             throw new Error(field.isUsername);
-		
+		var alertMe = this.fields[fieldName];
 		
 
         }
@@ -272,4 +272,3 @@ JoinForm.prototype.validateForm = function () {
     }
     return hasErrors;
 }
-
