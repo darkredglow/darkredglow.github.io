@@ -210,7 +210,6 @@ JoinForm.prototype.resetErrors = function () {
         message = this.fields[fieldName].message;
         $s(fieldName + "_error").firstChild.nodeValue =
             ( message ) ? message : "";
-	  
     }
 }
 // Set default messages
@@ -221,7 +220,6 @@ JoinForm.prototype.setMessages = function () {
         message = this.fields[fieldName].message;
         if(message == undefined){
         	message = "";
-		message.setAttribute("role", "alert");
         }
         $s(fieldName + "_error").firstChild.nodeValue = message;
     }
@@ -268,4 +266,3 @@ JoinForm.prototype.validateForm = function () {
     }
     return hasErrors;
 }
-
