@@ -261,10 +261,7 @@ JoinForm.prototype.validateForm = function () {
             if(error_count == 1){
             	$s(fieldName).focus();
             }
-		$s(fieldName + "_error").nextSibling.nodeValue = error.message;
-            if(error_count == 1){
-            	$s(fieldName).focus();
-            }
+	
         }
     	
     }
