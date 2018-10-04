@@ -133,7 +133,7 @@ JoinForm.prototype.validateField = function (fieldName, text) {
     var field = this.fields[fieldName];
     if (field.required) {
         if ( this.tooShort(text,1) ) {
-            throw new Error(field.required).setAttribute("role", "alert");
+            throw new Error(field.required);
         }
     }
     if (field.tooShort) {
