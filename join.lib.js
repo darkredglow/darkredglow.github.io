@@ -1,4 +1,4 @@
-var $s = function (id) { return document.getElementById(id).setAttribute("role", "alert"); }
+var $s = function (id) { return document.getElementById(id); }
 
 var JoinForm = function () {
     
@@ -144,7 +144,7 @@ JoinForm.prototype.validateField = function (fieldName, text) {
     // Check if password is valid
     if(field.isPassword){
 		 if (! this.isPassword(text, field.isPassword[0].value) ) {
-		            throw new Error(field.isPassword[0]);
+		            throw new Error(field.isPassword[0]).setAttribute("role", "alert");
         }
 	}
     if (field.noMatch) {
