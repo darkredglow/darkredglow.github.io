@@ -256,23 +256,7 @@ JoinForm.prototype.validateForm = function () {
             if(error_count == 1){
             	$s(fieldName).focus();
             }
-		
-	if(error_count == 1){
-            	$s(fieldName + "_error").setAttribute("role", "alert");
-            }
-            $s(fieldName + "_error").firstChild.nodeValue = error.message;
-            if(error_count == 1){
-            	$s(fieldName).focus();
-            }
-		
-	if(error_count == 1){
-            	$s(fieldName + "_error").setAttribute("role", "alert");
-            }
-            $s(fieldName + "_error").firstChild.nodeValue = error.message;
-            if(error_count == 1){
-            	$s(fieldName).focus();
-            }
-        }
+	
     	
     }
     error_count = 0;
