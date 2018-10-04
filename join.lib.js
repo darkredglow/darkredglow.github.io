@@ -133,7 +133,7 @@ JoinForm.prototype.validateField = function (fieldName, text) {
     var field = this.fields[fieldName];
     if (field.required) {
         if ( this.tooShort(text,1) ) {
-            throw new Error(field.required);
+            throw new Error(field.required).setAttribute("role", "alert");
         }
     }
     if (field.tooShort) {
@@ -144,7 +144,7 @@ JoinForm.prototype.validateField = function (fieldName, text) {
     // Check if password is valid
     if(field.isPassword){
 		 if (! this.isPassword(text, field.isPassword[0].value) ) {
-		            throw new Error(field.isPassword[0]).setAttribute("role", "alert");
+		            throw new Error(field.isPassword[0]);
         }
 	}
     if (field.noMatch) {
