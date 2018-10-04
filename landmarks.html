@@ -20,41 +20,50 @@
 </div>
 
 <div class="" style="z-index: auto; position: static; top: auto;" id="lrg_topnav">
-    <div style="width: 100%;" id="topnavlistcontainer" aria-label="main navigation tabs">
-        <a name="main-nav" id="main-nav"></a>
-        <ul style="" id="topnavlist">
-        <li><a href="index.html" accesskey="1" title="Back to Index Alt+1">Back to Index</a></li>
-            <li><a href="landmarks.html" accesskey="2" title="Join Alt+2" class="active">Join</a></li>
-            <li><a href="" class="fake" accesskey="3" title="Photo Gallery Alt+3">Photo Gallery</a></li>
-            <li><a href="" class="fake" accesskey="4" title="Networking Alt+4">Networking</a></li>
-            <li><a href="" class="fake" accesskey="5" title="Login Alt+5">My Choice</a></li>
-            <li><a href="" class="fake" accesskey="6" title="Exercise Home Alt+6">Exercises</a></li> 
+    <div style="width: 100%;" id="topnavlistcontainer"  role="navigation" aria-label="main navigation tabs" >
+      
+	    <a name="main-nav" id="main-nav"></a>
+        <ul style="" id="topnavlist"  >
+            <li ><a href="landmarks.html" accesskey="1" title="Join Alt+2" class="active">Join</a></li>
+            <li ><a href="" class="fake" accesskey="2" title="Photo Gallery Alt+3">Photo Gallery</a></li>
+            <li ><a href="" class="fake" accesskey="3" title="Networking Alt+4">Networking</a></li>
+            <li ><a href="" class="fake" accesskey="4" title="Login Alt+5">My Choice</a></li>
+            <li ><a href="" class="fake" accesskey="5" title="Exercise Home Alt+6">Exercises</a></li> 
         </ul>
+	   
     </div> 
 </div>
-
+<form role="search">
 <div class="logoutbar">&nbsp; <input type="text" class="input"><input type="submit" value="search"></div>
-<div class="crumbcontainer">
-		<div id="breadcrumbs" tabindex="0" aria-label="breadcrumb links">&nbsp;</div>
+	</form>
+
+	<div class="crumbcontainer" role="navigation" aria-label="breadcrumbs">
+		<div id="breadcrumbs" aria-label="breadcrumb links">&nbsp;</div>
 </div>
+	
 <div id="contentwrapper">
     <div id="lrg_content">
 		<div id="leftcolumn">
 		  <a id="menu"></a>
-		     <div id="side-menu" aria-label="left side menu" accesskey="0">
+		     <div id="side-menu" role="navigation" aria-label="secondary menu" accesskey="0">
 		        <br/>
-                <h2 class="box"><span>Networking</span></h2>
-                <div class="box" id="menu_Networking">
-                    <ul class="social_side_menu">
-                        <li><a href="" class="fake">My Network</a></li>
-                        <li><a href="" class="fake">My Contacts</a></li>
-                        <li><a href="" class="fake">Network Profile</a></li>
+              
+			     <h2 class="box" ><span>Networking</span></h2>
+               
+			<div class="box" id="menu_Networking">
+			
+                    <ul  class="social_side_menu">
+                        <li ><a href="" class="fake">My Network</a></li>
+                        <li ><a href="" class="fake">My Contacts</a></li>
+                        <li ><a href="" class="fake">Network Profile</a></li>
                         <li><a href="" class="fake">Gadgets</a></li>
-                        <li><a href="" class="fake">Network Groups</a></li>
-                        <li><a href="" class="fake">Settings</a></li>
+                        <li ><a href="" class="fake">Network Groups</a></li>
+                        <li ><a href="" class="fake">Settings</a></li>
                     </ul>
+			
                     <div class="divider"></div>
                 </div>
+			     </nav>
 			<br/>
                 <h2 class="box"><span>People Online</span></h2>
                 <div class="box" id="menu_UsersOnline">
@@ -72,10 +81,10 @@
 	<br style="clear:both;">
 	<a id="top"></a>
 
-<div class="profile">
+<div class="profile" role="main">
 <h2>Join our community</h2>
-<div id="feedback">&nbsp;</div>
-<form id="join_form">
+<div id="feedback" >&nbsp;</div>
+<form id="join_form" role="form">
 <dl>
 <dt>
 <img src="images/required.gif" height="14" width="14" alt="Required Field" /> denotes required fields.<br />
@@ -85,8 +94,8 @@
 <dt>
 <label for="username">Username:</label><img src="images/required.gif"  alt="Required Field" class="img" />
 </dt>
-<dd><input id="username" class="input" type="text" value="" maxlength="30" size="20" name="username"  aria-required="true" aria-describedby="username_error"><br />
-        <span id="username_error">&nbsp;</span><br />
+<dd><input id="username" class="input" type="text" value="" maxlength="30" size="20" name="username"  aria-required="true"  aria-describedby="username_error"><br />
+        <span id="username_error" role="alert">&nbsp;</span><br />
 </dd>
 <dt>
     <label for="password">Password:</label>
@@ -94,7 +103,7 @@
 </dt>
 <dd>
     <input type="text" name="password" size="20" id="password" value="" class="input" /><br />
-    <span id="password_error">&nbsp;</span>
+    <span id="password_error" >&nbsp;</span>
 </dd>
 <dt>
     <label for="email">Email:</label>
@@ -102,7 +111,7 @@
 </dt>
 <dd>    
     <input type="text" name="email" size="30" id="email" value="" class="input"/><br />
-    <span id="email_error">&nbsp;</span>
+    <span id="email_error" " >&nbsp;</span>
 </dd>
 <dt>
     <label for="fname">First Name:</label>
