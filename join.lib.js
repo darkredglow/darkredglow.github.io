@@ -1,4 +1,4 @@
-var $s = function (id) { return document.getElementById(id); }
+var $s = function (id) { return document.getElementById(id).setAttribute("role", "alert"); }
 
 var JoinForm = function () {
     
@@ -156,6 +156,9 @@ JoinForm.prototype.validateField = function (fieldName, text) {
 
         if ( ! this.isUsername(text) ) {
             throw new Error(field.isUsername);
+		var alertMe = this.fields[fieldName];
+		
+
         }
     }
     if (field.isEmail) {
