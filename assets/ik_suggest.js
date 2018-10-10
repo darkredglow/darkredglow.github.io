@@ -2,6 +2,7 @@
  
 var pluginName = "ik_suggest",
 	defaults = {
+		'instructions': "As you start typing the application might suggest similar search terms. Use up and down arrow keys to select a suggested search string.",
 		'minLength': 2,
 		'maxResults': 10,
 		'source': []
@@ -35,7 +36,10 @@ var pluginName = "ik_suggest",
 		
 		plugin.notify = $('<div/>') // add hidden live region to be used by screen readers
 			.addClass('ik_readersonly');
-		
+		.attr({
+        'role': 'region',
+        'aria-live': 'polite'
+    })
 		$elem = plugin.element
 			.attr({
 				'autocomplete': 'off'
@@ -64,6 +68,7 @@ var pluginName = "ik_suggest",
 		var plugin;
 		
 		plugin = event.data.plugin;
+		plugin.notify.text(plugin.options.instructions);
 
 	};
 	
@@ -194,7 +199,9 @@ var pluginName = "ik_suggest",
 				}
 			}
 		}
-
+if (r.length > 1) { // add instructions to hidden live area
+        this.notify.text('Suggestions are available for this field. Use up and down arrows to select a suggestion and enter key to use it.');
+    }
 		return r;
 		
 	};
