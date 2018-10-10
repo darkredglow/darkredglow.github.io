@@ -40,7 +40,7 @@ var pluginName = "ik_suggest",
         'role': 'region',
         'aria-live': 'polite'
     })
-		;
+		
 		$elem = plugin.element
 			.attr({
 				'autocomplete': 'off'
