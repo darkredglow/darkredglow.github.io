@@ -233,10 +233,11 @@ var pluginName = "ik_suggest",
 					r.push(arr[i].replace(regex, '<span>$1</span>'));
 				}
 			}
-		}
-    if (r.length > 1) { // add instructions to hidden live area
+		 if (r.length > 1) { // add instructions to hidden live area
         this.notify.text('Suggestions are available for this field. Use up and down arrows to select a suggestion and enter key to use it.');
     }
+		}
+   
 		return r;
 		
 	};
