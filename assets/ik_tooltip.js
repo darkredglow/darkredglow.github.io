@@ -92,5 +92,5 @@
 		});
 		
 	}
- 
+
 })( jQuery, window, document );
