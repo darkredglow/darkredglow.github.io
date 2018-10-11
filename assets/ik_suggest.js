@@ -1,16 +1,8 @@
-$(document).ready(function() {
-				
-		$("#country").ik_suggest({ 
-			min_length: 1,
-			source: countries 
-		});
-				
-});
 ;(function ( $, window, document, undefined ) {
  
 var pluginName = "ik_suggest",
 	defaults = {
-  'instructions': "As you start typing the application might suggest similar search terms. Use up and down arrow keys to select a suggested search string.",
+		'instructions': "As you start typing the application might suggest similar search terms. Use up and down arrow keys to select a suggested search string.",
 		'minLength': 2,
 		'maxResults': 10,
 		'source': []
@@ -43,15 +35,13 @@ var pluginName = "ik_suggest",
 		plugin = this;
 		
 		plugin.notify = $('<div/>') // add hidden live region to be used by screen readers
-			.addClass('ik_readersonly')
-       .attr({
+			.addClass('ik_readersonly');
+		
+		.attr({
         'role': 'region',
         'aria-live': 'polite'
     })
-      
-      ;
-	
-    
+		
 		$elem = plugin.element
 			.attr({
 				'autocomplete': 'off'
@@ -81,7 +71,6 @@ var pluginName = "ik_suggest",
 		
 		plugin = event.data.plugin;
         plugin.notify.text(plugin.options.instructions);
-
 	};
 	
 	/** 
@@ -131,8 +120,7 @@ var pluginName = "ik_suggest",
 		
 		plugin = event.data.plugin;
 		$me = $(event.currentTarget);
-    
-    switch (event.keyCode) {
+			switch (event.keyCode) {
     case ik_utils.keys.down: // select next suggestion from list   
                 selected = plugin.list.find('.selected');  
                 if(selected.length) {
@@ -151,9 +139,6 @@ var pluginName = "ik_suggest",
                 break;
            
             default: // get suggestions based on user input
-    
-    
-    
 				plugin.list.empty();
 				
 				suggestions = plugin.getSuggestions(plugin.options.source, $me.val());
@@ -168,8 +153,9 @@ var pluginName = "ik_suggest",
 				} else {
 					plugin.list.hide();
 				}
-		      break;
-    }		
+		     break;
+    }
+
 	};
 	
 	/** 
@@ -192,6 +178,7 @@ var pluginName = "ik_suggest",
 	 * 
 	 * @param {object} event - Keyboard event.
 	 * @param {object} event.data - Event data.
+
 	 * @param {object} event.data.plugin - Reference to plugin.
 	 */
 	Plugin.prototype.onOptionClick = function (event) {
@@ -233,11 +220,10 @@ var pluginName = "ik_suggest",
 					r.push(arr[i].replace(regex, '<span>$1</span>'));
 				}
 			}
-		 if (r.length > 1) { // add instructions to hidden live area
+		}
+if (r.length > 1) { // add instructions to hidden live area
         this.notify.text('Suggestions are available for this field. Use up and down arrows to select a suggestion and enter key to use it.');
     }
-		}
-   
 		return r;
 		
 	};
